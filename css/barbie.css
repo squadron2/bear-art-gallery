@@ -1,0 +1,108 @@
+/*
+Changes:
+- Change background, button, header/footer/nav colors
+- Changed font, size, and color
+- Changed font size on media query to discourage stacking
+- Play audioclip on click
+- Add box shadow to images
+- Change border colors, thickness, radius
+- Show/hide barbie logo on theme button click
+- Added button hover color and transition
+- Added text shadow
+*/
+
+@font-face {
+    font-family: barbie;
+    src: url(barbie.ttf);
+    
+}
+
+body {
+    font-family: barbie, Georgia, 'Times New Roman', Times, serif;
+    font-size: 29px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom right, lightpink, pink, hotpink);
+    color: #e0218a;
+    text-shadow: 1px 1px purple;
+}
+
+#headernav {
+    background-image: linear-gradient(to top, #87ced0, lightblue);
+    border-bottom: 2px solid purple;
+}
+
+#content footer {
+    background-image: linear-gradient(to bottom, #87ced0, lightblue);
+    border: 2px solid purple;
+}
+
+.themes {
+    font-family: barbie, Georgia, 'Times New Roman', Times, serif;
+    color: #e0218a;
+    background-color: pink;
+    transition: 0.5s;
+}
+
+button {
+    border-radius: 50%;
+}
+
+button:hover {
+    background-color: purple;
+    border-radius: 5px;
+}
+
+nav > a {
+    color: #e0218a;
+    font-size: 29px;
+}
+
+#headernav figure {
+    top: -30px;
+}
+
+img {
+    border-radius: 20px;
+}
+
+h1 {
+    text-shadow: 2px 1px purple;
+}
+
+#sec_gallery img, #sec_home img, #sec_about img  {
+    border: 3px solid purple;
+    box-shadow:
+    purple 0px 0px 30px,
+    purple 0px 0px 24px,
+    purple 0px 0px 18px,
+    purple 0px 0px 12px,
+    purple 0px 0px 6px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    #sec_about figcaption {
+        font-size: 10px;
+    }
+
+    .themes {
+        font-size: 7px;
+        padding: 1px;
+    }
+
+    #headernav nav a {
+        font-size: 16px;
+    } 
+
+    #headernav figure {
+        top: -5px;
+    }
+
+    #headernav, #content footer {
+        border-bottom: 1px solid purple;
+    }
+}

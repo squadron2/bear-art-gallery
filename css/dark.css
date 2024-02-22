@@ -1,0 +1,61 @@
+/*
+I kept dark theme changes to mirror original theme, because that's how I think of
+a dark theme being: changing colors. I made more drastic changes in the barbie
+theme to try and make things more unique.
+Changes:
+- Changed font
+- Inverted original colors for images
+- Inverted original colors for backgrounds and borders
+- Reduced font size on media query to discourage stacking (font is wider)
+*/
+
+#headernav, #content footer {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: none;
+    background-color: black;
+    color: white;
+}
+
+#content p {
+    color: black;
+}
+
+#about_text p, #sec_home header p {
+    color: white;
+}
+
+#gallery_figures img, #sec_home img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+#header_logo img {
+    -webkit-filter: invert(0);
+    filter: invert(0);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #sec_about figcaption {
+        font-size: 10px;
+    }
+
+    .themes {
+        font-size: 7px;
+        padding: 1px;
+    }
+
+    #headernav figure {
+        top: -5px;
+    }
+}

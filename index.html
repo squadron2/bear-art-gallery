@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+Changes:
+- Added theme buttons
+- Added div to footer
+- Added additional hideable logo
+-->
+
+<html>
+    <head>
+        <title>Bear Art</title>
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <link id="styles" rel="stylesheet" href="css/main.css" type="text/css">
+        <script src="js/script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="content">
+            <div id="headernav">
+                <header>
+                    <figure id="header_logo">
+                        <img src="img/bear_logo.png" alt="Bear Logo">
+                    </figure>
+                    <figure id="header_logo_barbie">
+                        <img src="img/bear_logo_barbie.png" alt="Bear Barbie Logo">
+                    </figure>
+                </header>
+                <nav>
+                    <button id="originalTheme" class="themes">Original</button>
+                    <button id="darkTheme" class="themes">Dark</button>
+                    <button id="barbieTheme" class="themes">Barbie</button>
+                    <a onclick="removeGallery(); removeAbout(); restoreHome()" href="#">Home</a>
+                    <a onclick="removeHome(); removeAbout(); restoreGallery()" href="#">Gallery</a>
+                    <a onclick="removeHome(); removeGallery(); restoreAbout()" href="#">About</a>
+                </nav>
+            </div>
+            <main>
+                <section class="noneable" id="sec_home">
+                    <header>
+                        <h1>Bear Art</h1>
+                        <p class="subtitle">A Site for an Immature Artist's Poorly-Drawn Artwork</p>
+                    </header>
+                    <div id="home_figures">
+                        <figure id="home_left">
+                            <img src="img/wookie_dragon.png" alt="Wookie Dragon">
+                        </figure>
+                        <figure id="home_middle">
+                            <img src="img/jetdog_jetcat.png" alt="Jetdog Jetcat">
+                        </figure>
+                        <figure id="home_right">
+                            <img src="img/bear_skeet.png" alt="Bear Skeet">
+                        </figure>
+                    </div>
+                </section>
+                <section class="noneable" id="sec_gallery">
+                    <header>
+                        <h1>Gallery</h1>
+                    </header>
+                    <div id="gallery_figures">
+                        <figure>
+                            <img src="img/rocket_monkey.png" alt="Rocket Monkey">
+                        </figure>
+                        <figure>
+                            <img src="img/bear_pinata.png" alt="Bear Pinata">
+                        </figure>
+                        <figure>
+                            <img src="img/bear_chopper.png" alt="Bear Chopper">
+                        </figure>
+                        <figure>
+                            <img src="img/monkey_laying.png" alt="Monkey Laying">
+                        </figure>
+                        <figure>
+                            <img src="img/dino_heart.png" alt="Dino Heart">
+                        </figure>
+                        <figure>
+                            <img src="img/bear_skeet.png" alt="Bear Skeet">
+                        </figure>
+                        <figure>
+                            <img src="img/jetdog_jetcat.png" alt="Jetdog Jetcat">
+                        </figure>
+                        <figure>
+                            <img src="img/wookie_dragon.png" alt="Wookie Dragon">
+                        </figure>
+                    </div>
+                </section>
+                <section class="noneable" id="sec_about">
+                    <header>
+                        <h1>About Bear Art and Its Creator</h1>
+                    </header>
+                    <figure>
+                        <img src="img/trash_bryce.jpg" alt="Trash Bryce" id="trash_bryce">
+                        <figcaption>Fig. 1 - Bryce Starring in Cub Scout Film: "Trash Monster"</figcaption>
+                    </figure>
+                    <div id="about_text">
+                        <p>
+                            Prior to marriage, Bryce Gardner made little to no effort to record his drawings. He developed his drawing abilities beginning at a young age during school, church, or travel. Unfortunately, Bryce's drawing abilities never developed beyond that of a five-year old. Losing interest in art, his skills then lay dormant for several years. They were reawakened in adulthood by drawing dinosaurs-tearing-humans-apart-type pictures to pass to girls in school. If they laughed, he knew he had a shot. They rarely laughed. Now Bear Art is a site to present and store the artwork of Bryce Gardner.
+                        </p>
+                    </div>
+                    <div id="vid_jig">
+                        <video width="480" height="853" controls loop>
+                            <source src="img/pip_jig.mp4">
+                        </video>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <p>This content is mine. Please don't take it :)</p>
+            </footer>
+        </div>
+    </body>
+</html>

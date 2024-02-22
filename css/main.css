@@ -1,0 +1,255 @@
+/*
+Changes:
+- Applied original theme to theme buttons
+- Added link to selected stylesheet which changes
+- Changed mobile media query to account for buttons
+- Add cursor change for button hover
+*/
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom left, orange, #122620);
+    margin: 0px;
+}
+
+/* Desktop View */
+#content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1440px;
+    margin: 0 auto;
+    grid-template-areas: 
+    "headernav headernav headernav headernav"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+/* BEGIN HEADER */
+#headernav > header {
+    grid-area: header;
+    padding: 0px;
+    padding-left: 25px;
+}
+#headernav figure {
+    position: relative;
+    top: -25px;
+    text-align: left;
+}
+#headernav img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+/* END HEADER */
+
+#headernav { /* Contains the fixed header/nav header */
+    grid-area: headernav;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "header nav nav nav";
+    grid-template-rows: 80px;
+    position: fixed;
+    width: 100%;
+    left: 0%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom left, #F4EBD0, #F4EBD0);
+    border-bottom: 2px solid black;
+}
+
+/* BEGIN NAV */
+#content nav {
+    grid-area: nav;
+    padding: 25px;
+    padding-right: 90px;
+    text-align: right;
+}
+#content nav a {
+    padding: 20px;
+}
+/* END NAV */
+
+#content main {
+    grid-area: main;
+    padding-top: 240px;
+    padding-bottom: 250px;
+}
+
+/* BEGIN FOOTER */
+#content footer {
+    grid-area: footer;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom left, #F4EBD0, #F4EBD0);
+    padding: 0px;
+    text-align: center;
+    border: 2px solid black;
+}
+/* END FOOTER */
+
+/* BEGIN HOME PAGE */
+#sec_home > header { /* Heading for home page and subtitle */
+    position: relative;
+    top: -80px;
+    text-align: center;
+}
+#home_figures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+#sec_home img {
+    width: 385px;
+    height: auto;
+    border: 2px solid black;
+}
+/* END HOME PAGE */
+
+/* BEGIN GALLERY PAGE */
+#sec_gallery > header {
+    position: relative;
+    top: -80px;
+    text-align: center;
+}
+#gallery_figures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+#sec_gallery img {
+    width: 500px;
+    height: auto;
+    border: 2px solid black;
+}
+/* END GALLERY PAGE */
+
+/* BEGIN ABOUT PAGE */
+#sec_about > header {
+    position: relative;
+    top: -80px;
+    text-align: center;
+}
+#sec_about figure {
+    text-align: center;
+    padding-bottom: 90px;
+}
+#sec_about img {
+    width: 500px;
+    height: auto;
+    border: 2px solid black;
+}
+#sec_about figcaption {
+    font-style: italic;
+    font-size: 16px;
+}
+#about_text {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+    ". about_p about_p about_p .";
+}
+#about_text p {
+    grid-area: about_p;
+    text-align: justify;
+}
+#vid_jig {
+    text-align: center;
+    position: relative;
+    top: 80px;
+}
+/* END ABOUT PAGE */
+
+/* Hide Gallery and About pages by default */
+#sec_gallery, #sec_about, #header_logo_barbie {
+    display: none;
+}
+
+nav > a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+
+.themes {
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    body {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 16px;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to bottom left, lightgreen, #122620);
+        margin: 0px;
+    }
+    #content nav {
+        padding: 20px;
+        padding-right: 70px;
+    }
+    #content nav a {
+        padding: 0px;
+    }
+    #headernav > header {
+        padding: 0px;
+        padding-left: 15px;
+    }
+    #headernav figure {
+        top: -10px;
+    }
+    #headernav { /* Contains the fixed header/nav header */
+        grid-template-rows: 60px;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to bottom left, #F4EBD0, #F4EBD0);
+        border-bottom: 1px solid black;
+        grid-template-areas:
+        "header nav nav nav";
+    }
+    #headernav img {
+        width: 45px;
+        height: 45px;
+    }
+    #content footer {
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to bottom left, #F4EBD0, #F4EBD0);
+        border: 1px solid black;
+    }
+    #sec_home img {
+        border: 1px solid black;
+    }
+    #sec_gallery img {
+        width: 385px;
+        border: 1px solid black;
+    }
+    #sec_about img {
+        width: 385px;
+        border: 1px solid black;
+    }
+    #sec_about figcaption {
+        font-size: 12px;
+    }
+
+    .themes {
+        font-size: 8px;
+        padding: 1px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
